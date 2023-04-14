@@ -18,13 +18,17 @@ function createGrid(size) {
 
   // Create new squares
   for (let i = 0; i < size * size; i++) {
+    const randomColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(
+      Math.random() * 256
+    )}, ${Math.floor(Math.random() * 256)})`;
+
     const square = document.createElement("div");
     square.classList.add("square");
 
-    square.addEventListener("mouseenter", () =>{
-        square.style.backgroundColor = "red";
-    })
-    
+    square.addEventListener("mouseenter", () => {
+      square.style.backgroundColor = randomColor;
+    });
+
     gridContainer.appendChild(square);
   }
 }
