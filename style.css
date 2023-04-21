@@ -28,7 +28,3 @@ h1, p {
     background-color: white;
     transition: background-color 0.3s;
 }
-
-.square:hover {
-    background-color: green;
-}
